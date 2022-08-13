@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered data</title>
+</head>
+<body>  
+    <h1>INFORMATION OF REGISTERED STUDENT </h1>
+    <br>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Mobile_no</th>
+                <th scope="col">Address</th>
+                <th scope="col">Courses</th>
+                <th scope="col">Action</th>
+                
+            </tr>
+        </thead>
+        {% if user %}
+        <tbody>
+            
+          <tr>
+              
+              <td>{{i.name}}</td>
+              <td>{{i.email}}</td>
+              <td>{{i.mobile_no}}</td>
+              <td>{{i.address}}</td>
+              <td>{{i.courses}}</td>
+              <td>
+              <a href="/editpage/{{ i.id }}"><button type="submit"> Edit</button></a>
+           
+             
+               
+                
+                <a href="/deletedata/{{ i.id }}"><button type="submit"> Delete</button></a>
+                  
+              </td>
+            </tr> 
+        {% endif %}    
+
+        </tbody>
+
+    </table>
+    <br><br>      
+</body>
+</html>
+</body>
+</html>
